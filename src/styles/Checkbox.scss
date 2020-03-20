@@ -1,0 +1,49 @@
+.fakebox__wrapper {
+	margin-top: 40px;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	.fakebox {
+		border: solid 1px lightgray;
+		border-radius: 5px;
+		background-color: white;
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	svg {
+		pointer-events: none;
+		color: #5fa8d3;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	input {
+		outline: none;
+		-webkit-appearance: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		&:checked {
+			~ svg {
+				opacity: 1;
+			}
+		}
+
+		&:disabled {
+			~ svg {
+				color: black;
+			}
+			~ .fakebox {
+				background-color: gray;
+			}
+		}
+	}
+}
