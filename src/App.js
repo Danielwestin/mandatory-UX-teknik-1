@@ -39,7 +39,7 @@ function App() {
 					<RadioButtons />
 					<div className="buttons">
 						<button
-							className="disable__button"
+							className="disable__button button"
 							onClick={() => {
 								disable();
 							}}
@@ -47,7 +47,7 @@ function App() {
 							Disable
 						</button>
 						<button
-							className="enable__button"
+							className="enable__button button"
 							onClick={() => {
 								enable();
 							}}

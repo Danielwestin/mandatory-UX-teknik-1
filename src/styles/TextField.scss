@@ -3,20 +3,20 @@
 	width: 280px;
 	height: 55px;
 	position: relative;
-	overflow: hidden;
 
 	input {
 		width: 100%;
 		height: 100%;
 		border: none;
 		outline: none;
-		padding-top: 10px;
+		padding-top: 20px;
 		padding-left: 6px;
 		font-size: 16px;
+		box-sizing: border-box;
 
 		&:focus,
 		&:valid {
-			+  {
+			~  {
 				label {
 					.form__label__span {
 						transform: translateY(-70%);
@@ -24,8 +24,12 @@
 						font-size: 12px;
 					}
 					&::after {
-						transform: translateX(0%);
+						width: 100%;
 					}
+				}
+				span {
+					opacity: 1;
+					transition: all 0.2s ease;
 				}
 			}
 		}
@@ -61,10 +65,10 @@
 			position: absolute;
 			bottom: -1px;
 			left: 0px;
-			width: 100%;
+			width: 0px;
 			height: 100%;
 			border-bottom: solid 3px#5fa8d3;
-			transform: translateX(-100%);
+
 			transition: all 0.3s ease;
 		}
 
@@ -75,5 +79,10 @@
 			left: 0px;
 			transition: all 0.3s ease;
 		}
+	}
+	.helper {
+		opacity: 0;
+		color: #5fa8d3;
+		font-size: 16px;
 	}
 }
