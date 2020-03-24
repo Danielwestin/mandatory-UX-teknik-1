@@ -45,5 +45,10 @@
 				background-color: gray;
 			}
 		}
+		&:focus {
+			~ .fakebox {
+				outline: 2px solid orange;
+			}
+		}
 	}
 }

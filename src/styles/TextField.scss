@@ -16,6 +16,7 @@
 
 		&:focus,
 		&:valid {
+			outline: 2px solid orange;
 			~  {
 				label {
 					.form__label__span {
